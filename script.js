@@ -2,7 +2,7 @@
 // QR CODE
 // =========================
 
-const wishlistURL = "https://marcasnercharleron-hue.github.io/my-social-links/";
+const wishlistURL = "https://marcasnercharleron-hue.github.io/WL/";
 
 const qrContainer = document.getElementById("qrcode");
 
