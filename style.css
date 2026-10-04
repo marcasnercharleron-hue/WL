@@ -1,0 +1,321 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rose: #d96c91;
+    --rose-dark: #b94f75;
+    --rose-light: #fff0f5;
+    --gold: #c9a227;
+    --gold-light: #e8cf73;
+    --cream: #fffaf7;
+    --text: #4a3039;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "Georgia", "Times New Roman", serif;
+    background: linear-gradient(180deg, #fff7fa, #fffaf7);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at top left, rgba(232, 207, 115, 0.25), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(217, 108, 145, 0.25), transparent 35%),
+        linear-gradient(135deg, #fff0f5, #fffaf7);
+    border-bottom: 2px solid var(--gold-light);
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-title {
+    color: var(--gold);
+    font-size: 15px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: var(--rose-dark);
+    font-size: clamp(42px, 8vw, 80px);
+    margin-bottom: 25px;
+    text-shadow: 1px 2px 8px rgba(201, 162, 39, 0.2);
+}
+
+.welcome-text {
+    max-width: 750px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    color: #684953;
+    white-space: pre-line;
+}
+
+/* =========================
+   WISHLIST
+========================= */
+
+.wishlist {
+    max-width: 1150px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.wishlist > h2 {
+    text-align: center;
+    color: var(--rose-dark);
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #87636e;
+    margin-bottom: 55px;
+}
+
+/* =========================
+   GIFT CARDS
+========================= */
+
+.gift-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--gold-light);
+    border-radius: 25px;
+    padding: 35px;
+    margin-bottom: 45px;
+    box-shadow: 0 12px 35px rgba(185, 79, 117, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(185, 79, 117, 0.2);
+}
+
+.gift-card h3 {
+    text-align: center;
+    color: var(--rose-dark);
+    font-size: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.gift-card h3::after {
+    content: "✦";
+    display: block;
+    color: var(--gold);
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* =========================
+   GIFT IMAGES
+========================= */
+
+.gift-image {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.gift-image p {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--rose-dark);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+.gift-image img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    border-radius: 18px;
+    background: var(--cream);
+    border: 1px solid rgba(201, 162, 39, 0.35);
+    padding: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-image img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 25px rgba(201, 162, 39, 0.25);
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.gift-info {
+    border-top: 1px solid rgba(201, 162, 39, 0.35);
+    padding-top: 22px;
+    margin-top: 20px;
+}
+
+.gift-info p,
+.gift-card > p {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #684953;
+    font-size: 16px;
+    max-width: 850px;
+    margin: auto;
+}
+
+/* =========================
+   QR SECTION
+========================= */
+
+.qr-section {
+    text-align: center;
+    padding: 80px 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #fffaf7,
+            #fdf5df
+        );
+    border-top: 2px solid var(--gold-light);
+    border-bottom: 2px solid var(--gold-light);
+}
+
+.qr-section h2 {
+    color: var(--rose-dark);
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.qr-section > p {
+    font-family: Arial, sans-serif;
+    color: #684953;
+    margin-bottom: 25px;
+}
+
+.qr-box {
+    display: inline-block;
+    background: white;
+    padding: 18px;
+    border-radius: 20px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 10px 30px rgba(201, 162, 39, 0.2);
+}
+
+.qr-box img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+}
+
+.scan-text {
+    color: var(--gold) !important;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--rose-dark);
+    color: white;
+    font-family: Arial, sans-serif;
+    letter-spacing: 3px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 480px;
+        padding: 55px 18px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .welcome-text {
+        font-size: 15px;
+    }
+
+    .wishlist {
+        margin: 55px auto;
+        padding: 0 15px;
+    }
+
+    .wishlist > h2 {
+        font-size: 30px;
+    }
+
+    .gift-card {
+        padding: 22px 15px;
+        border-radius: 20px;
+    }
+
+    .gift-card h3 {
+        font-size: 25px;
+    }
+
+    .gift-image {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gift-image img {
+        max-height: 210px;
+    }
+
+    .gift-info p,
+    .gift-card > p {
+        font-size: 14px;
+    }
+
+    .qr-section {
+        padding: 60px 15px;
+    }
+
+    .qr-section h2 {
+        font-size: 28px;
+    }
+
+    .qr-box img {
+        width: 180px;
+        height: 180px;
+    }
+}
